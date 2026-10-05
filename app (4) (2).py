@@ -6,7 +6,7 @@ import os
 # Sayfa Konfigürasyonu
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="ONLİNE SATIŞ - PERSONEL",
+    page_title="HEDEF AVM GİZLİ FIRSAT",
     page_icon="🏆",
     layout="wide"
 )
