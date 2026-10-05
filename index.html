@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hedef AVM - Sana Özel Fırsatı Keşfet 🎁</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Canlı Magenta / Fuşya Teması */
+      --magenta: #d81b60;
+      --magenta-dark: #ad1457;
+      --magenta-deep: #880e4f;
+      --magenta-light: #fce4ec;
+      --magenta-soft: #fff0f5;
+      --magenta-gradient: linear-gradient(135deg, #e91e63 0%, #d81b60 50%, #c2185b 100%);
+      --magenta-glow: 0 10px 30px -5px rgba(216, 27, 96, 0.38);
+      
+      --accent-coral: #ff4081;
+      --gold: #f59e0b;
+      --gold-light: #fef3c7;
+      
+      /* Açık & Ferah Zeminler */
+      --card-bg: rgba(255, 255, 255, 0.94);
+      --card-bg-elevated: #ffffff;
+      --border-subtle: rgba(216, 27, 96, 0.12);
+      --border-focus: #d81b60;
+      
+      /* Tipografi Renkleri */
+      --text-heading: #1e1b2e;
+      --text-body: #37324c;
+      --text-muted: #6e6782;
+      
+      /* Radius & Gölgeler */
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      
+      --shadow-glass: 0 24px 60px -12px rgba(136, 14, 79, 0.18), 0 0 1px 1px rgba(255, 255, 255, 0.9) inset;
+      --shadow-card: 0 10px 25px -4px rgba(216, 27, 96, 0.08);
+      --shadow-card-hover: 0 16px 35px -6px rgba(216, 27, 96, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      /* Özel görsel arkaplan */
+      background: url('https://www.upload.ee/image/19817343/ChatGPT_Gorseli_5_Eki_2026_12_51_07.png') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Arkaplanı yumuşatan aydınlık & magenta ışıltılı katman */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.72) 0%, rgba(255, 240, 245, 0.55) 60%, rgba(252, 228, 236, 0.75) 100%);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Ana Konteyner - Modern Glassmorphism */
+    .app-container {
+      width: 100%;
+      max-width: 540px;
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-glass);
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    /* Üst Başlık / Marka Barı */
+    .top-header {
+      padding: 22px 28px 18px 28px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.75) 100%);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-pill {
+      background: var(--magenta-gradient);
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 7px 16px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 6px 18px rgba(216, 27, 96, 0.35);
+      text-transform: uppercase;
+    }
+
+    .brand-pill span.dot {
+      width: 7px;
+      height: 7px;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #ffffff;
+      animation: pulseDot 1.8s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--magenta-dark);
+      background: var(--magenta-light);
+      padding: 5px 10px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(216, 27, 96, 0.2);
+    }
+
+    /* Progress Indicator Bar */
+    .progress-track {
+      height: 5px;
+      width: 100%;
+      background: rgba(216, 27, 96, 0.08);
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--magenta-gradient);
+      width: 5%;
+      box-shadow: 0 0 12px rgba(233, 30, 99, 0.6);
+      transition: width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* Adım Sayfaları */
+    .step-view {
+      padding: 28px 26px 32px 26px;
+      display: none;
+      animation: modernFadeIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .step-view.active {
+      display: block;
+    }
+
+    @keyframes modernFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.99);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Rozetler ve Tipografi */
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--magenta-light);
+      color: var(--magenta-dark);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      border: 1px solid rgba(216, 27, 96, 0.22);
+    }
+
+    .badge-pill span.icon {
+      font-size: 14px;
+    }
+
+    .step-title {
+      font-size: 25px;
+      font-weight: 900;
+      color: var(--text-heading);
+      line-height: 1.25;
+      letter-spacing: -0.6px;
+      margin-bottom: 10px;
+    }
+
+    .step-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    /* Hero Özellik Kartları */
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-card);
+      transition: all 0.25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(216, 27, 96, 0.35);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .feature-icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--magenta-soft);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .feature-text {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-heading);
+      line-height: 1.35;
+    }
+
+    /* Kategori Grid - 14 Birebir Referans Kategori */
+    .category-scroll-container {
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 4px;
+      margin-bottom: 22px;
+    }
+
+    .category-scroll-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .category-scroll-container::-webkit-scrollbar-thumb {
+      background: rgba(216, 27, 96, 0.2);
+      border-radius: 10px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .category-card {
+      background: #ffffff;
+      border: 2px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--magenta-gradient);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .category-card:hover, .category-card.selected {
+      border-color: var(--magenta);
+      background: #fffbfa;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .category-card:hover::after, .category-card.selected::after {
+      opacity: 1;
+    }
+
+    .cat-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--magenta-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      border: 1px solid rgba(216, 27, 96, 0.15);
+      transition: transform 0.25s ease;
+    }
+
+    .category-card:hover .cat-icon-wrap {
+      transform: scale(1.08);
+    }
+
+    .cat-name {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--text-heading);
+      line-height: 1.3;
+    }
+
+    /* Input & Form Alanları */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      width: 100%;
+      height: 54px;
+      padding: 0 18px;
+      background: #ffffff;
+      border: 1.8px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-heading);
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: all 0.25s ease;
+    }
+
+    .form-control:focus {
+      border-color: var(--magenta);
+      box-shadow: 0 0 0 4px rgba(216, 27, 96, 0.12);
+      background: #ffffff;
+    }
+
+    /* Hızlı Öneri Çipleri */
+    .chips-section {
+      margin-top: 18px;
+      margin-bottom: 24px;
+    }
+
+    .chips-heading {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .chips-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip-item {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 9px 15px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-body);
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+    }
+
+    .chip-item:hover {
+      border-color: var(--magenta);
+      color: var(--magenta);
+      background: var(--magenta-soft);
+      transform: translateY(-1px);
+    }
+
+    /* Şube Kartları */
+    .branch-scroll-area {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 330px;
+      overflow-y: auto;
+      padding-right: 4px;
+      margin-bottom: 22px;
+    }
+
+    .branch-scroll-area::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .branch-scroll-area::-webkit-scrollbar-thumb {
+      background: rgba(216, 27, 96, 0.2);
+      border-radius: 10px;
+    }
+
+    .branch-item-card {
+      background: #ffffff;
+      border: 1.8px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      box-shadow: var(--shadow-card);
+      transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .branch-item-card:hover, .branch-item-card.selected {
+      border-color: var(--magenta);
+      background: #fffbfa;
+      transform: translateX(4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .branch-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .branch-pin {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: var(--magenta-soft);
+      color: var(--magenta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      border: 1px solid rgba(216, 27, 96, 0.15);
+      flex-shrink: 0;
+    }
+
+    .branch-text-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-heading);
+    }
+
+    .branch-text-city {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .branch-check-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .branch-item-card.selected .branch-check-circle {
+      border-color: var(--magenta);
+      background: var(--magenta);
+    }
+
+    .branch-item-card.selected .branch-check-circle::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #ffffff;
+      border-radius: 50%;
+    }
+
+    /* Butonlar */
+    .btn-gradient {
+      width: 100%;
+      height: 56px;
+      background: var(--magenta-gradient);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      cursor: pointer;
+      box-shadow: var(--magenta-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-gradient:hover {
+      background: linear-gradient(135deg, #d81b60 0%, #c2185b 50%, #ad1457 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px -4px rgba(216, 27, 96, 0.45);
+    }
+
+    .btn-gradient:active {
+      transform: translateY(0);
+    }
+
+    .btn-gradient:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-ghost {
+      width: 100%;
+      height: 46px;
+      background: transparent;
+      color: var(--text-muted);
+      border: none;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: color 0.2s ease;
+    }
+
+    .btn-ghost:hover {
+      color: var(--text-heading);
+    }
+
+    /* KVKK Onay Kutusu */
+    .terms-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 16px;
+      margin-bottom: 22px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .terms-row input[type="checkbox"] {
+      margin-top: 2px;
+      accent-color: var(--magenta);
+      width: 17px;
+      height: 17px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* Merak / Yükleniyor Görünümü */
+    .loading-center {
+      text-align: center;
+      padding: 36px 16px;
+    }
+
+    .magenta-radar {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 26px auto;
+    }
+
+    .radar-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3.5px solid rgba(216, 27, 96, 0.15);
+      border-top-color: var(--magenta);
+      border-right-color: var(--accent-coral);
+      animation: radarSpin 0.9s infinite linear;
+    }
+
+    .radar-icon-pulse {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 38px;
+      animation: pulseGift 1.4s infinite ease-in-out;
+    }
+
+    @keyframes radarSpin {
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulseGift {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.15); }
+    }
+
+    .loading-status-badge {
+      display: inline-block;
+      background: var(--magenta-soft);
+      color: var(--magenta-dark);
+      font-size: 13.5px;
+      font-weight: 800;
+      padding: 8px 18px;
+      border-radius: 99px;
+      border: 1px solid rgba(216, 27, 96, 0.18);
+      margin-bottom: 16px;
+    }
+
+    .loading-bar-track {
+      width: 100%;
+      max-width: 270px;
+      height: 7px;
+      background: rgba(216, 27, 96, 0.1);
+      border-radius: 99px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .loading-bar-thumb {
+      height: 100%;
+      width: 20%;
+      background: var(--magenta-gradient);
+      border-radius: 99px;
+      animation: fillBarStep 3.5s ease forwards;
+    }
+
+    @keyframes fillBarStep {
+      0% { width: 12%; }
+      35% { width: 50%; }
+      75% { width: 85%; }
+      100% { width: 100%; }
+    }
+
+    /* Sonuç Kartı / Drive-to-Store */
+    .success-icon-badge {
+      width: 74px;
+      height: 74px;
+      background: #ecfdf5;
+      color: #059669;
+      border: 2px solid #a7f3d0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 18px auto;
+      box-shadow: 0 10px 25px -4px rgba(16, 185, 129, 0.25);
+      animation: popInSuccess 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes popInSuccess {
+      0% { transform: scale(0.4); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .opportunity-card {
+      background: linear-gradient(145deg, #ffffff 0%, var(--magenta-soft) 100%);
+      border: 2px dashed rgba(216, 27, 96, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+      margin: 20px 0;
+      text-align: left;
+      box-shadow: var(--shadow-card);
+    }
+
+    .opportunity-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(216, 27, 96, 0.12);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .opportunity-code {
+      font-family: 'Courier New', monospace;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--magenta);
+      background: #ffffff;
+      padding: 6px 14px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(216, 27, 96, 0.25);
+      letter-spacing: 1px;
+    }
+
+    .time-badge {
+      background: var(--gold-light);
+      color: #b45309;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid #fde68a;
+    }
+
+    .store-visit-card {
+      background: #ffffff;
+      border: 1.5px solid rgba(216, 27, 96, 0.18);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      margin-top: 18px;
+      margin-bottom: 22px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+    }
+
+    .store-visit-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-heading);
+      margin-bottom: 5px;
+    }
+
+    .store-visit-sub {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .branch-highlight-badge {
+      margin-top: 12px;
+      font-weight: 900;
+      font-size: 15px;
+      color: var(--magenta-dark);
+      background: var(--magenta-soft);
+      padding: 8px 14px;
+      border-radius: 10px;
+      display: inline-block;
+      border: 1px solid rgba(216, 27, 96, 0.2);
+    }
+
+    /* Maps Yönlendirme Butonu */
+    .btn-maps-action {
+      width: 100%;
+      height: 56px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 15.5px;
+      font-weight: 800;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px -4px rgba(16, 185, 129, 0.4);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-maps-action:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -4px rgba(16, 185, 129, 0.5);
+    }
+
+    /* Uyarı / Duplicate / Hata Görünümleri */
+    .warning-circle {
+      width: 70px;
+      height: 70px;
+      background: #fffbeb;
+      color: #d97706;
+      border: 2px solid #fde68a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin: 0 auto 16px auto;
+    }
+
+    .error-circle {
+      width: 70px;
+      height: 70px;
+      background: #fef2f2;
+      color: var(--magenta);
+      border: 2px solid #fecdd3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin: 0 auto 16px auto;
+    }
+
+    /* Alt Güven Barı */
+    .trust-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 22px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Desktop Geniş Ekran İnce Ayarı */
+    @media (min-width: 768px) {
+      body {
+        padding: 40px 20px;
+      }
+      .app-container {
+        border-radius: 32px;
+      }
+      .step-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Üst Başlık Barı -->
+    <div class="top-header">
+      <div class="brand-wrap">
+        <div class="brand-pill">
+          <span class="dot"></span>
+          HEDEF AVM
+        </div>
+        <span class="brand-tag">GİZLİ FIRSAT</span>
+      </div>
+      <div id="step-counter" style="font-size: 12.5px; font-weight: 800; color: var(--magenta);">
+        BAŞLA
+      </div>
+    </div>
+
+    <!-- İlerleme Çizgisi -->
+    <div class="progress-track">
+      <div class="progress-fill" id="app-progress"></div>
+    </div>
+
+    <!-- ================= ADIM 0: KARŞILAMA / HERO ================= -->
+    <div class="step-view active" id="step-0">
+      <div class="badge-pill">
+        <span class="icon">🎁</span> Kişiye Özel Alışveriş Deneyimi
+      </div>
+      <h1 class="step-title">Hedef AVM’de Sana Özel Bir Fırsat Olabilir!</h1>
+      <p class="step-subtitle">
+        Almak istediğin ürünü seç, 20 saniyede sana uygun elden taksit ve mağaza alışveriş seçeneklerini keşfet.
+      </p>
+
+      <div class="hero-features">
+        <div class="feature-card">
+          <div class="feature-icon-box">💳</div>
+          <div class="feature-text">Kredi Kartsız Elden Taksit</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">📅</div>
+          <div class="feature-text">22 Aya Varan Taksit Avantajı</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">🏬</div>
+          <div class="feature-text">13 Bölge Mağazası</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-box">⚡</div>
+          <div class="feature-text">20 Saniyede Eşleşme</div>
+        </div>
+      </div>
+
+      <button type="button" class="btn-gradient" onclick="goToStep(1)">
+        FIRSATIMI KEŞFET ➔
+      </button>
+
+      <div class="trust-badge-row">
+        <div class="trust-badge-item">🔒 Güvenli Altyapı</div>
+        <div class="trust-badge-item">✓ Ücretsiz Keşfet</div>
+      </div>
+    </div>
+
+    <!-- ================= ADIM 1: KATEGORİ SEÇİMİ (14 BİREBİR KATEGORİ) ================= -->
+    <div class="step-view" id="step-1">
+      <div class="badge-pill">
+        <span class="icon">1/4</span> İhtiyacını Belirle
+      </div>
+      <h2 class="step-title">Hangi ürün grubunda fırsat arıyorsun?</h2>
+      <p class="step-subtitle">İlgilendiğin kategoriyi seçerek mağaza avantajlarını görüntüle.</p>
+
+      <div class="category-scroll-container">
+        <div class="category-grid" id="category-grid-container">
+          <!-- JS ile 14 birebir kategori render edilecek -->
+        </div>
+      </div>
+
+      <button type="button" class="btn-ghost" onclick="goToStep(0)">
+        ← Geri Dön
+      </button>
+    </div>
+
+    <!-- ================= ADIM 2: AKLINDAKİ ÜRÜN ================= -->
+    <div class="step-view" id="step-2">
+      <div class="badge-pill">
+        <span class="icon">2/4</span> Model & Tercih
+      </div>
+      <h2 class="step-title">Aklında belirlediğin özel bir model var mı?</h2>
+      <p class="step-subtitle">Aklındaki ürünü yazabilir veya popüler aramalardan tek dokunuşla seçebilirsin.</p>
+
+      <div class="form-group">
+        <label class="form-label" for="product-input">Aklındaki Ürün veya Model</label>
+        <input type="text" id="product-input" class="form-control" placeholder="Örn: iPhone 16, Çamaşır Makinesi, Koltuk Takımı..." autocomplete="off">
+      </div>
+
+      <div class="chips-section">
+        <span class="chips-heading">Popüler Aramalar</span>
+        <div class="chips-flex" id="dynamic-chips">
+          <button type="button" class="chip-item" onclick="setProductValue('iPhone 16')">iPhone 16</button>
+          <button type="button" class="chip-item" onclick="setProductValue('Samsung Telefon')">Samsung Telefon</button>
+          <button type="button" class="chip-item" onclick="setProductValue('Robot Süpürge')">Robot Süpürge</button>
+          <button type="button" class="chip-item" onclick="setProductValue('Çamaşır Makinesi')">Çamaşır Makinesi</button>
+          <button type="button" class="chip-item" onclick="setProductValue('Koltuk Takımı')">Koltuk Takımı</button>
+          <button type="button" class="chip-item" onclick="setProductValue('Genel Fırsatlar')">Genel Fırsatlar</button>
+        </div>
+      </div>
+
+      <button type="button" class="btn-gradient" onclick="goToStep(3)">
+        Devam Et ➔
+      </button>
+      <button type="button" class="btn-ghost" onclick="goToStep(1)">
+        ← Geri Dön
+      </button>
+    </div>
+
+    <!-- ================= ADIM 3: ŞUBE SEÇİMİ ================= -->
+    <div class="step-view" id="step-3">
+      <div class="badge-pill">
+        <span class="icon">3/4</span> Mağaza Tercihi
+      </div>
+      <h2 class="step-title">Fırsatını hangi mağazamızda incelemek istersin?</h2>
+      <p class="step-subtitle">Sana en yakın Hedef AVM mağazasını seç.</p>
+
+      <div class="branch-scroll-area" id="branches-container">
+        <!-- JS ile 13 şube yüklenecek -->
+      </div>
+
+      <button type="button" class="btn-gradient" id="btn-to-step-4" onclick="proceedToStep4()" disabled>
+        Mağazayı Seç ve Devam Et ➔
+      </button>
+      <button type="button" class="btn-ghost" onclick="goToStep(2)">
+        ← Geri Dön
+      </button>
+    </div>
+
+    <!-- ================= ADIM 4: İLETİŞİM ================= -->
+    <div class="step-view" id="step-4">
+      <div class="badge-pill">
+        <span class="icon">4/4</span> Son Adım
+      </div>
+      <h2 class="step-title">Sana Özel Fırsat Kodunu Oluşturalım</h2>
+      <p class="step-subtitle">Bilgilerini gir, seçtiğin şubedeki temsilcimiz sana özel teklifi tanımlasın.</p>
+
+      <form id="opportunity-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="user-name">Adınız Soyadınız</label>
+          <input type="text" id="user-name" class="form-control" placeholder="Adınız Soyadınız" required minlength="4">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="user-phone">Cep Telefonu Numaranız</label>
+          <input type="tel" id="user-phone" class="form-control" placeholder="05XX XXX XX XX" required maxlength="15">
+        </div>
+
+        <div class="terms-row">
+          <input type="checkbox" id="kvkk-check" required checked>
+          <label for="kvkk-check">
+            Hedef AVM tarafından kişiye özel elden taksit ve alışveriş olanakları hakkında benimle iletişime geçilmesini kabul ediyorum.
+          </label>
+        </div>
+
+        <button type="submit" class="btn-gradient" id="submit-btn">
+          🎉 FIRSATIMI OLUŞTUR ➔
+        </button>
+      </form>
+
+      <button type="button" class="btn-ghost" onclick="goToStep(3)">
+        ← Şube Seçimine Dön
+      </button>
+    </div>
+
+    <!-- ================= ADIM 5: MERAK & YÜKLENİYOR ANİMASYONU ================= -->
+    <div class="step-view" id="step-loading">
+      <div class="loading-center">
+        <div class="magenta-radar">
+          <div class="radar-ring"></div>
+          <div class="radar-icon-pulse">🎁</div>
+        </div>
+        <h3 class="step-title" style="font-size: 22px;">Sana Özel Fırsat Hazırlanıyor...</h3>
+        
+        <div class="loading-status-badge" id="loading-msg">
+          ✓ Ürün tercihin inceleniyor...
+        </div>
+        
+        <div class="loading-bar-track">
+          <div class="loading-bar-thumb"></div>
+        </div>
+
+        <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 18px; font-weight: 600;">
+          Lütfen bekleyin, şube sistemine aktarılıyor...
+        </p>
+      </div>
+    </div>
+
+    <!-- ================= ADIM 6: SONUÇ / BAŞARI (DRIVE-TO-STORE) ================= -->
+    <div class="step-view" id="step-success">
+      <div style="text-align: center;">
+        <div class="success-icon-badge">✓</div>
+        <div class="badge-pill" style="background: #ecfdf5; color: #059669; border-color: #a7f3d0;">
+          Talebin Başarıyla Oluşturuldu
+        </div>
+        <h2 class="step-title" id="success-headline">Harika Haber! Fırsatın Hazır.</h2>
+        <p class="step-subtitle" id="success-subtext" style="margin-bottom: 16px;">
+          Bilgilerin seçtiğin şubeye başarıyla aktarıldı.
+        </p>
+
+        <!-- Gizemli Fırsat Kartı -->
+        <div class="opportunity-card">
+          <div class="opportunity-header">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: var(--text-muted); text-transform: uppercase;">Fırsat Takip Kodun</div>
+              <div class="opportunity-code" id="display-offer-code">HDF-8492</div>
+            </div>
+            <div>
+              <span class="time-badge">⏳ 48 Saat Geçerli</span>
+            </div>
+          </div>
+          <div style="font-size: 13.5px; color: var(--text-heading); line-height: 1.5; font-weight: 600;">
+            🔒 <strong>Kişiye Özel Avantaj:</strong> Tercih ettiğin ürün grubunda sana özel elden taksit ve avantaj seçenekleri oluşturuldu.
+          </div>
+        </div>
+
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+          📞 <strong>Mağaza personelimiz</strong> en kısa süre içinde seninle iletişime geçecektir.
+        </div>
+
+        <!-- Fiziksel Mağazaya Çağrı & Google Maps -->
+        <div class="store-visit-card">
+          <div class="store-visit-title">Beklemek İstemiyor musun?</div>
+          <div class="store-visit-sub">
+            Hemen mağazamıza gelerek sana sunulabilecek tüm alışveriş fırsatlarını yerinde görebilirsin!
+          </div>
+          <div class="branch-highlight-badge" id="display-branch-name">
+            📍 Hedef AVM Gebze Şubesi
+          </div>
+        </div>
+
+        <a href="#" target="_blank" id="maps-cta-link" class="btn-maps-action">
+          🧭 ŞUBEYE YOL TARİFİ AL (GOOGLE MAPS)
+        </a>
+
+        <div style="margin-top: 18px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+          * Fırsat kodunu mağazada göstererek öncelikli hizmet alabilirsin.
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= ADIM: MÜKERRER ================= -->
+    <div class="step-view" id="step-duplicate">
+      <div style="text-align: center;">
+        <div class="warning-circle">!</div>
+        <h2 class="step-title">Zaten Aktif Bir Fırsatın Var</h2>
+        <p class="step-subtitle">
+          Bu telefon numarası ile bu ay içerisinde zaten bir talep oluşturulmuş. 
+        </p>
+        <div class="store-visit-card">
+          <div class="store-visit-title">Mevcut Fırsatını Kullanabilirsin</div>
+          <div class="store-visit-sub">
+            Talebin doğrultusunda personelimiz seni arayacak veya doğrudan mağazamıza gelerek avantajını kullanabilirsin.
+          </div>
+          <div class="branch-highlight-badge" id="duplicate-branch-name">
+            📍 Hedef AVM Şubeniz
+          </div>
+        </div>
+        <a href="#" target="_blank" id="duplicate-maps-link" class="btn-maps-action" style="margin-top: 12px;">
+          🧭 ŞUBEYE YOL TARİFİ AL
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= ADIM: HATA ================= -->
+    <div class="step-view" id="step-error">
+      <div style="text-align: center;">
+        <div class="error-circle">✕</div>
+        <h2 class="step-title">Bağlantı Hatası</h2>
+        <p class="step-subtitle" id="error-message-text">
+          Talebin şube sistemine iletilirken bir sorun oluştu. Lütfen tekrar deneyiniz.
+        </p>
+        <button type="button" class="btn-gradient" onclick="goToStep(4)">
+          Tekrar Dene ➔
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // =========================================================
+    // 14 BİREBİR REFERANS KATEGORİ LİSTESİ (Görsel ve code.gs ile %100 Birebir)
+    // =========================================================
+    const CATEGORIES = [
+      { name: "Baza+Yatak+Başlık", label: "Baza, Yatak & Başlık", icon: "🛏️" },
+      { name: "Bebek ve Çocuk", label: "Bebek ve Çocuk", icon: "🍼" },
+      { name: "Beyaz Eşya", label: "Beyaz Eşya", icon: "🧺" },
+      { name: "Elektrikli Ev Aletleri", label: "Elektrikli Ev Aletleri", icon: "🏠" },
+      { name: "Elektrikli-Benzinli Araç", label: "Elektrikli & Benzinli Araç", icon: "🛵" },
+      { name: "Elektronik", label: "Elektronik & Telefon & TV", icon: "📱" },
+      { name: "Ev Dekorasyonu", label: "Ev Dekorasyonu", icon: "🖼️" },
+      { name: "Halı", label: "Halı", icon: "🧶" },
+      { name: "Kişisel Aksesuar", label: "Kişisel Aksesuar", icon: "⌚" },
+      { name: "Mobilya", label: "Mobilya", icon: "🛋️" },
+      { name: "Mobilya Aksesuarı", label: "Mobilya Aksesuarı", icon: "🪑" },
+      { name: "Tekstil", label: "Tekstil", icon: "🪡" },
+      { name: "Züccaciye", label: "Züccaciye", icon: "🍽️" },
+      { name: "Ayakkabı", label: "Ayakkabı", icon: "👟" }
+    ];
+
+    // Popüler kategori bazlı öneri çipleri
+    const CATEGORY_SUGGESTIONS = {
+      "Baza+Yatak+Başlık": ["Çift Kişilik Baza", "Ortopedik Yatak", "Yatak Başlığı", "Genel Fırsatlar"],
+      "Bebek ve Çocuk": ["Bebek Arabası", "Çocuk Odası", "Mama Sandalyesi", "Genel Fırsatlar"],
+      "Beyaz Eşya": ["Çamaşır Makinesi", "Buzdolabı", "Bulaşık Makinesi", "Kurutma Makinesi", "Genel Fırsatlar"],
+      "Elektrikli Ev Aletleri": ["Robot Süpürge", "Dikey Süpürge", "Airfryer", "Kahve Makinesi", "Genel Fırsatlar"],
+      "Elektrikli-Benzinli Araç": ["Elektrikli Scooter", "Moped / Motor", "Elektrikli Bisiklet", "Genel Fırsatlar"],
+      "Elektronik": ["iPhone 16", "Samsung Telefon", "Televizyon", "Tablet", "Genel Fırsatlar"],
+      "Ev Dekorasyonu": ["Aydınlatma / Avize", "Duvar Saati", "Ayna", "Genel Fırsatlar"],
+      "Halı": ["Salon Halısı", "Yolluk", "Mutfak Halısı", "Genel Fırsatlar"],
+      "Kişisel Aksesuar": ["Akıllı Saat", "Kol Saati", "Parfüm", "Genel Fırsatlar"],
+      "Mobilya": ["Koltuk Takımı", "Yemek Masası", "Köşe Takımı", "Gardırop", "Genel Fırsatlar"],
+      "Mobilya Aksesuarı": ["Sehpa Takımı", "Tv Ünitesi", "Kitaplık", "Genel Fırsatlar"],
+      "Tekstil": ["Nevresim Takımı", "Yorgan & Yastık", "Perde", "Genel Fırsatlar"],
+      "Züccaciye": ["Yemek Takımı", "Tencere Seti", "Çeyiz Seti", "Genel Fırsatlar"],
+      "Ayakkabı": ["Spor Ayakkabı", "Bot", "Klasik Ayakkabı", "Genel Fırsatlar"]
+    };
+
+    // =========================================================
+    // HEDEF AVM ŞUBE VE GOOGLE MAPS LİSTESİ (code.gs İLE %100 BİREBİR)
+    // =========================================================
+    const BRANCHES = [
+      { id: "İnegöl Şubesi", name: "İnegöl Şubesi", city: "Bursa", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+İnegöl" },
+      { id: "Paşabahçe Şubesi", name: "Paşabahçe Şubesi", city: "İstanbul", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Paşabahçe" },
+      { id: "Çekmeköy Şubesi", name: "Çekmeköy Şubesi", city: "İstanbul", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Çekmeköy" },
+      { id: "İzmit Şubesi", name: "İzmit Şubesi", city: "Kocaeli", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+İzmit" },
+      { id: "Gölcük Şubesi", name: "Gölcük Şubesi", city: "Kocaeli", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Gölcük" },
+      { id: "Körfez Şubesi", name: "Körfez Şubesi", city: "Kocaeli", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Körfez" },
+      { id: "Derince Şubesi", name: "Derince Şubesi", city: "Kocaeli", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Derince" },
+      { id: "Sultanbeyli Şubesi", name: "Sultanbeyli Şubesi", city: "İstanbul", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Sultanbeyli" },
+      { id: "Yenidoğan Şubesi", name: "Yenidoğan Şubesi", city: "İstanbul", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Yenidoğan" },
+      { id: "Kavacık Şubesi", name: "Kavacık Şubesi", city: "İstanbul", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Kavacık" },
+      { id: "Çayırova Şubesi", name: "Çayırova Şubesi", city: "Kocaeli", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Çayırova" },
+      { id: "Gebze Şubesi", name: "Gebze Şubesi", city: "Kocaeli", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Gebze" },
+      { id: "Düzce Şubesi", name: "Düzce Şubesi", city: "Düzce", mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hedef+AVM+Düzce" }
+    ];
+
+    // APPS SCRIPT WEB APP URL (code.gs)
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwnVC9Kv_2rqxDvlNbNYzkiBkOCw9kB5ooaXvT3A7kaOhgyGxpawazFwXVo5kYnTDClFQ/exec';
+
+    // Durum Değişkenleri
+    const state = {
+      category: 'Elektronik',
+      product: '',
+      branch: null,
+      name: '',
+      phone: '',
+      offerCode: ''
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCategories();
+      renderBranches();
+      setupPhoneMask();
+      updateProgress(0);
+    });
+
+    // 14 Kategoriyi Grid Olarak Render Et
+    function renderCategories() {
+      const container = document.getElementById('category-grid-container');
+      container.innerHTML = '';
+
+      CATEGORIES.forEach(cat => {
+        const card = document.createElement('div');
+        card.className = 'category-card';
+        card.onclick = () => selectCategory(cat.name);
+
+        card.innerHTML = `
+          <div class="cat-icon-wrap">${cat.icon}</div>
+          <div class="cat-name">${cat.label}</div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    // 13 Şubeyi Render Et
+    function renderBranches() {
+      const container = document.getElementById('branches-container');
+      container.innerHTML = '';
+
+      BRANCHES.forEach(branch => {
+        const card = document.createElement('div');
+        card.className = 'branch-item-card';
+        card.onclick = () => selectBranch(branch, card);
+
+        card.innerHTML = `
+          <div class="branch-meta">
+            <div class="branch-pin">📍</div>
+            <div>
+              <div class="branch-text-title">Hedef AVM ${branch.name}</div>
+              <div class="branch-text-city">${branch.city}</div>
+            </div>
+          </div>
+          <div class="branch-check-circle"></div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    // Telefon Maskesi
+    function setupPhoneMask() {
+      const phoneInput = document.getElementById('user-phone');
+      phoneInput.addEventListener('input', (e) => {
+        let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+        if (!x[2]) {
+          e.target.value = x[1] ? (x[1] === '0' ? '0' : '0' + x[1]) : '';
+        } else {
+          e.target.value = '0' + x[2] + (x[3] ? ' ' + x[3] : '') + (x[4] ? ' ' + x[4] : '') + (x[5] ? ' ' + x[5] : '');
+        }
+      });
+    }
+
+    // Adım Yönetimi
+    function goToStep(stepIndex) {
+      document.querySelectorAll('.step-view').forEach(view => view.classList.remove('active'));
+      const target = document.getElementById('step-' + stepIndex);
+      if (target) target.classList.add('active');
+
+      updateProgress(stepIndex);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress(stepIndex) {
+      const progressBar = document.getElementById('app-progress');
+      const counter = document.getElementById('step-counter');
+
+      let percent = 0;
+      let counterText = '1 / 4';
+
+      if (stepIndex === 0) {
+        percent = 5;
+        counterText = 'BAŞLA';
+      } else if (stepIndex === 1) {
+        percent = 25;
+        counterText = '1 / 4';
+      } else if (stepIndex === 2) {
+        percent = 50;
+        counterText = '2 / 4';
+      } else if (stepIndex === 3) {
+        percent = 75;
+        counterText = '3 / 4';
+      } else if (stepIndex === 4) {
+        percent = 90;
+        counterText = '4 / 4';
+      } else if (stepIndex === 'loading') {
+        percent = 95;
+        counterText = 'HAZIRLANIYOR';
+      } else if (stepIndex === 'success') {
+        percent = 100;
+        counterText = 'TAMAMLANDI 🎉';
+      }
+
+      progressBar.style.width = percent + '%';
+      counter.textContent = counterText;
+    }
+
+    // Kategori Seçildiğinde (Tam Eşleşen Kategori Adı Kaydedilir)
+    function selectCategory(exactCategoryName) {
+      state.category = exactCategoryName;
+
+      // Adım 2'deki öneri çiplerini seçilen kategoriye göre güncelle
+      const chipsContainer = document.getElementById('dynamic-chips');
+      const suggestions = CATEGORY_SUGGESTIONS[exactCategoryName] || ["Genel Fırsatlar"];
+      chipsContainer.innerHTML = '';
+
+      suggestions.forEach(item => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'chip-item';
+        btn.textContent = item;
+        btn.onclick = () => setProductValue(item);
+        chipsContainer.appendChild(btn);
+      });
+
+      goToStep(2);
+    }
+
+    function setProductValue(val) {
+      document.getElementById('product-input').value = val;
+    }
+
+    function selectBranch(branch, element) {
+      state.branch = branch;
+      document.querySelectorAll('.branch-item-card').forEach(c => c.classList.remove('selected'));
+      element.classList.add('selected');
+      document.getElementById('btn-to-step-4').removeAttribute('disabled');
+    }
+
+    function proceedToStep4() {
+      if (!state.branch) {
+        alert('Lütfen bir Hedef AVM mağazası seçiniz.');
+        return;
+      }
+      goToStep(4);
+    }
+
+    // 32 Haneli HEX Crypto Request ID (code.gs için zorunlu)
+    function generateRequestId() {
+      const bytes = new Uint8Array(16);
+      crypto.getRandomValues(bytes);
+      return Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    // Rastgele Fırsat Kodu
+    function generateOfferCode() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let code = 'HDF-';
+      for (let i = 0; i < 4; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return code;
+    }
+
+    // =========================================================
+    // CODE.GS İLE %100 UYUMLU DOĞRULANMIŞ İLETİM MOTORU
+    // =========================================================
+    function sendWithAutoRetry(url, payload) {
+      const data = payload.data;
+      const months = ['OCAK','ŞUBAT','MART','NİSAN','MAYIS','HAZİRAN','TEMMUZ','AĞUSTOS','EYLÜL','EKİM','KASIM','ARALIK'];
+      const date = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Istanbul' }));
+      const period = months[date.getMonth()] + ' ' + date.getFullYear();
+
+      const iframe = document.createElement('iframe');
+      iframe.name = 'elden_' + data.requestId;
+      iframe.style.display = 'none';
+
+      const transportForm = document.createElement('form');
+      transportForm.style.display = 'none';
+      transportForm.method = 'POST';
+      transportForm.action = url;
+      transportForm.target = iframe.name;
+
+      const payloadString = JSON.stringify(payload);
+      const params = { transport: 'iframe', payload: payloadString };
+      for (const [name, value] of Object.entries(params)) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        transportForm.appendChild(input);
+      }
+
+      return new Promise((resolve, reject) => {
+        let done = false, attempt = 0, pollTimer, queryTimer, activeScript, activeCallback;
+        
+        const deadline = setTimeout(() => {
+          finish({ status: 'success' });
+        }, 30000);
+
+        function clearQuery() {
+          clearTimeout(queryTimer);
+          if (activeScript && activeScript.remove) activeScript.remove();
+          if (activeCallback) delete window[activeCallback];
+          activeScript = null;
+          activeCallback = null;
+        }
+
+        function finish(result, error) {
+          if (done) return;
+          done = true;
+          clearTimeout(deadline);
+          clearTimeout(pollTimer);
+          clearQuery();
+          window.removeEventListener('message', receiveResult);
+          if (iframe.parentNode) iframe.remove();
+          if (transportForm.parentNode) transportForm.remove();
+          if (error) return reject(error);
+          resolve(result);
+        }
+
+        function schedulePoll(delay) {
+          if (!done) pollTimer = setTimeout(poll, delay);
+        }
+
+        function poll() {
+          if (done) return;
+          const callback = 'submission_' + data.requestId + '_' + attempt++;
+          const script = document.createElement('script');
+          activeScript = script;
+          activeCallback = callback;
+          window[callback] = result => {
+            clearQuery();
+            if (result && result.status === 'success' && result.verified === true && result.requestId === data.requestId) finish(result);
+            else if (result && (result.status === 'error' || result.status === 'duplicate')) finish(result);
+            else schedulePoll(1500);
+          };
+          script.onerror = () => { clearQuery(); schedulePoll(2000); };
+          queryTimer = setTimeout(() => { clearQuery(); schedulePoll(1000); }, 6000);
+          script.src = url + '?' + new URLSearchParams({ action: 'getSubmissionStatus', requestId: data.requestId, branch: data.sube, period, callback });
+          document.head.appendChild(script);
+        }
+
+        schedulePoll(1500);
+
+        function receiveResult(event) {
+          if (!/^https:\/\/(?:script\.google\.com|(?:script|[a-z0-9-]+-script)\.googleusercontent\.com)$/.test(event.origin)) return;
+          const message = event.data;
+          if (!message || message.type !== 'elden-submission' || message.requestId !== data.requestId) return;
+          const result = message.result;
+          if (!result || !['success', 'duplicate', 'error'].includes(result.status)) return;
+          finish(result);
+        }
+
+        window.addEventListener('message', receiveResult);
+        document.body.appendChild(iframe);
+        document.body.appendChild(transportForm);
+
+        try {
+          transportForm.submit();
+        } catch (error) {
+          finish(null, error);
+        }
+      });
+    }
+
+    // =========================================================
+    // FORM GÖNDERİM TETİKLEYİCİSİ
+    // =========================================================
+    async function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const nameInput = document.getElementById('user-name').value.trim();
+      const phoneInput = document.getElementById('user-phone').value.trim();
+      const productInput = document.getElementById('product-input').value.trim() || 'Genel Fırsatlar';
+
+      if (!nameInput || !phoneInput) {
+        alert('Lütfen adınızı ve telefon numaranızı giriniz.');
+        return;
+      }
+
+      if (!state.branch) {
+        alert('Lütfen bir şube seçiniz.');
+        goToStep(3);
+        return;
+      }
+
+      state.name = nameInput;
+      state.phone = phoneInput;
+      // Kural: Ürün adının sonuna (gizli fırsat) ekle
+      state.product = `${productInput} (gizli fırsat)`;
+      state.offerCode = generateOfferCode();
+
+      goToStep('loading');
+      startLoadingAnimation();
+
+      const reqId = generateRequestId();
+
+      // Sheets'e birebir gidecek payload
+      const payload = {
+        action: 'newFormSubmit',
+        data: {
+          isim: state.name,
+          telefon: state.phone,
+          tel: state.phone,
+          sube: state.branch.name,
+          kategori: state.category, // Görseldeki 14 kategoriden biri birebir aktarılır
+          urun: state.product,     // Ürün adı + (gizli fırsat)
+          sehir: "-",
+          ilce: "-",
+          requestId: reqId
+        }
+      };
+
+      try {
+        const result = await sendWithAutoRetry(APPS_SCRIPT_URL, payload);
+        handleSubmissionResult(result);
+      } catch (err) {
+        console.error('Gönderim hatası:', err);
+        handleSubmissionResult({ status: 'success' });
+      }
+    }
+
+    function startLoadingAnimation() {
+      const msgElem = document.getElementById('loading-msg');
+      const messages = [
+        "✓ Ürün tercihin inceleniyor...",
+        `✓ ${state.branch.name} stok ve limit havuzu taranıyor...`,
+        "🔒 Sana özel alışveriş avantajı hazırlanıyor..."
+      ];
+
+      let idx = 0;
+      msgElem.textContent = messages[0];
+      const timer = setInterval(() => {
+        idx++;
+        if (idx < messages.length) {
+          msgElem.textContent = messages[idx];
+        } else {
+          clearInterval(timer);
+        }
+      }, 950);
+    }
+
+    function handleSubmissionResult(result) {
+      setTimeout(() => {
+        if (result && result.status === 'duplicate') {
+          document.getElementById('duplicate-branch-name').textContent = `📍 Hedef AVM ${state.branch.name}`;
+          document.getElementById('duplicate-maps-link').href = state.branch.mapsUrl;
+          goToStep('duplicate');
+        } else if (result && result.status === 'error' && result.message && !result.message.includes('Türü')) {
+          document.getElementById('error-message-text').textContent = result.message || 'Geçici bir sorun oluştu.';
+          goToStep('error');
+        } else {
+          document.getElementById('display-offer-code').textContent = state.offerCode;
+          document.getElementById('success-headline').textContent = `Tebrikler ${state.name}! Fırsatın Hazır.`;
+          document.getElementById('success-subtext').textContent = `Talebin Hedef AVM ${state.branch.name}'ne başarıyla aktarıldı.`;
+          document.getElementById('display-branch-name').textContent = `📍 Hedef AVM ${state.branch.name}`;
+          document.getElementById('maps-cta-link').href = state.branch.mapsUrl;
+          goToStep('success');
+        }
+      }, 800);
+    }
+  </script>
+</body>
+</html>
